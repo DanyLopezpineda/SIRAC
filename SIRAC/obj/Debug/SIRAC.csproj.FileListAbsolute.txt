@@ -1,0 +1,11 @@
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\bin\Debug\SIRAC.exe.config
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\bin\Debug\SIRAC.exe
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\bin\Debug\SIRAC.pdb
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.csproj.AssemblyReference.cache
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.csproj.SuggestedBindingRedirects.cache
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.Properties.Resources.resources
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.Registros_Academicos.Catalogos.CatalogosCarreras.resources
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.csproj.GenerateResource.cache
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.csproj.CoreCompileInputs.cache
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.exe
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.pdb
