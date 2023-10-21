@@ -19,20 +19,17 @@ namespace SIRAC.Fuentes
         public SqlCommand Cmd;
 
         //------------------------PROCEDIMIENTO PARA INSERTAR DATOS------------------------//
-        public bool INSERT(string SQL)
+        public DataTable GetCarreras()
         {
             DBSIRAC.Open();
-            Cmd = new SqlCommand(SQL, DBSIRAC);
-            int i = Cmd.ExecuteNonQuery();
+            SqlCommand CMD;
+            CMD = new SqlCommand("SELECT * FROM Vw_Carreras", DBSIRAC);
+            SqlDataAdapter DA;
+            DA = new SqlDataAdapter(CMD);
+            DataSet DS = new DataSet();
+            DA.Fill(DS, "TABLA");
             DBSIRAC.Close();
-            if (i > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return DS.Tables["TABLA"];
         }
     }
 }

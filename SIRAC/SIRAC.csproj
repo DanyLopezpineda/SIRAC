@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fuentes\Datos.cs" />
+    <Compile Include="Fuentes\Insercion.cs" />
     <Compile Include="Fuentes\Listados.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
