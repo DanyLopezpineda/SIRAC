@@ -54,5 +54,28 @@ namespace SIRAC.Registros_Academicos.Catalogos
             txtcodigo.Text = indices.Cells["Id_Maestros"].Value.ToString();
 
         }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            string codigo = txtcodigo.Text;
+
+            if(codigo == "")
+            {
+                MessageBox.Show("NO SE ENCONTRO EL MAESTRO QUE DESEA ELIMINAR", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+            else
+            {
+                string Desh = "exec USP_UPDATE_CATLOG_MAESTROS '" + txtpnombre.Text + "','" + txtsnombre.Text + "','" + txtpapellido.Text + "','" + txtsapellido.Text + "','" + 1 + "','" + txtcarrera.Text + "', '" + codigo + "'";
+                if(i.INSERT(Desh))
+                {
+                    MessageBox.Show("REGISTRO ELIMINADO CORRECTAMENTE", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = cn.GetMaestros_Condicional();
+                }
+                else
+                {
+                    MessageBox.Show("NO SE INGRESARON LOS DATOS CORRECTAMENTE", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

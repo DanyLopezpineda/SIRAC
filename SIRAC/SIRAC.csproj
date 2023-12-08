@@ -63,6 +63,12 @@
     <Compile Include="Registros_Academicos\Catalogos\CatalogosClases.Designer.cs">
       <DependentUpon>CatalogosClases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros_Academicos\Catalogos\CatalogosConceptoPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros_Academicos\Catalogos\CatalogosConceptoPagos.Designer.cs">
+      <DependentUpon>CatalogosConceptoPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros_Academicos\Catalogos\CatalogosMaestros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros_Academicos\Catalogos\CatalogosClases.resx">
       <DependentUpon>CatalogosClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros_Academicos\Catalogos\CatalogosConceptoPagos.resx">
+      <DependentUpon>CatalogosConceptoPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros_Academicos\Catalogos\CatalogosMaestros.resx">
       <DependentUpon>CatalogosMaestros.cs</DependentUpon>
