@@ -9,3 +9,5 @@ D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.cspro
 D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.csproj.CoreCompileInputs.cache
 D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.exe
 D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.pdb
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.Registros_Academicos.Catalogos.CatalogosClases.resources
+D:\Users\Documents\Visual Studio 2019\Proyecto\SIRAC\SIRAC\obj\Debug\SIRAC.Registros_Academicos.Catalogos.CatalogosMaestros.resources

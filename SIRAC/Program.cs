@@ -16,7 +16,7 @@ namespace SIRAC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registros_Academicos.Catalogos.CatalogosCarreras());
+            Application.Run(new Registros_Academicos.Catalogos.CatalogosMaestros());
         }
     }
 }

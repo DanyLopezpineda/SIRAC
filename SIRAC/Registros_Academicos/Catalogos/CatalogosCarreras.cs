@@ -18,6 +18,7 @@ namespace SIRAC.Registros_Academicos.Catalogos
 
             list.ListTTitulacion(cboxtipotitulacion);
             dataGridView1.DataSource = d.GetCarreras();
+            BQBOTONES();
         }
 
         Fuentes.Listados list = new Fuentes.Listados();
@@ -29,12 +30,39 @@ namespace SIRAC.Registros_Academicos.Catalogos
 
         }
 
+        public void BQBOTONES()
+        {
+            string Codigo = txtcodigo.Text;
+
+            if(Codigo != "")
+            {
+                btnguardar.Enabled = false;
+                btnactualizar.Enabled = false;
+                btneliminar.Enabled = true;
+                btnnuevo.Enabled = true;
+                btneditar.Enabled = true;
+                txtcarrera.Enabled = false;
+                cboxtipotitulacion.Enabled = false;
+            }
+            else
+            {
+                btnguardar.Enabled = true;
+                btnactualizar.Enabled = false;
+                btneliminar.Enabled = false;
+                btnnuevo.Enabled = false;
+                btneditar.Enabled = false;
+                txtcarrera.Enabled = true;
+                cboxtipotitulacion.Enabled = true;
+            }
+
+        }
+
         private void btnguardar_Click(object sender, EventArgs e)
         {
             string Carrera = txtcarrera.Text;
-            int titulo = cboxtipotitulacion.SelectedIndex;
+            string titulo = cboxtipotitulacion.Text;
 
-            if(Carrera == "" && titulo == 0)
+            if(Carrera == "" && titulo == "")
             {
                 MessageBox.Show("COMPLETAR LOS CAMPOS OBLIGATORIOS", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtcarrera.Focus();
@@ -45,6 +73,7 @@ namespace SIRAC.Registros_Academicos.Catalogos
                 if (s.INSERT(Guardar))
                 {
                     MessageBox.Show("REGISTRO GUARDADO CORRECTAMENTE", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = d.GetCarreras();
                 }
                 else
                 {
@@ -59,6 +88,7 @@ namespace SIRAC.Registros_Academicos.Catalogos
             DataGridViewRow indices = dataGridView1.CurrentRow;
             txtcodigo.Text = indices.Cells["IdCarrera"].Value.ToString();
             txtcarrera.Text = indices.Cells["Carrera"].Value.ToString();
+            BQBOTONES();
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
@@ -117,6 +147,24 @@ namespace SIRAC.Registros_Academicos.Catalogos
 
                 }
             }
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            txtcodigo.Text = "";
+            txtcarrera.Text = "";
+            cboxtipotitulacion.Text = "";
+            BQBOTONES();
+            txtcarrera.Focus();
+        }
+
+        private void btneditar_Click(object sender, EventArgs e)
+        {
+            txtcarrera.Enabled = true;
+            cboxtipotitulacion.Enabled = true;
+
+            btnactualizar.Enabled = true;
+            btneditar.Enabled = false;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace SIRAC.Fuentes
         public DataSet ds = new DataSet();
         public SqlCommand Cmd;
 
-        //------------------------PROCEDIMIENTO PARA INSERTAR DATOS------------------------//
+        //------------------------VISTA PARA OBTENER LOS DATOS DE LAS CARRERAS DE LA BASE DE DATOS SIRAC------------------------//
         public DataTable GetCarreras()
         {
             DBSIRAC.Open();
@@ -30,6 +30,21 @@ namespace SIRAC.Fuentes
             DA.Fill(DS, "TABLA");
             DBSIRAC.Close();
             return DS.Tables["TABLA"];
+        }
+
+        //------------------------VISTA PARA OBTENER LOS DATOS DE LOS MAESTROS DE LA TABLA DE CATALOGOS DE MAESTROS------------------------//
+
+        public DataTable GetMaestros_Condicional()
+        {
+            DBSIRAC.Open();
+            SqlCommand CMD;
+            CMD = new SqlCommand("SELECT * FROM Vw_Maestros_condicional", DBSIRAC);
+            SqlDataAdapter DA;
+            DA = new SqlDataAdapter(CMD);
+            DataSet DS = new DataSet();
+            DA.Fill(DS, "Tabla");
+            DBSIRAC.Close();
+            return DS.Tables["Tabla"];
         }
     }
 }

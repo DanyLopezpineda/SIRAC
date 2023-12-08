@@ -89,6 +89,7 @@
             this.btneditar.TabIndex = 4;
             this.btneditar.Text = "EDITAR";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnactualizar
             // 
@@ -108,6 +109,7 @@
             this.btnnuevo.TabIndex = 6;
             this.btnnuevo.Text = "NUEVO";
             this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // dataGridView1
             // 
