@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatalogosConceptoPagos));
             this.label1 = new System.Windows.Forms.Label();
             this.txtconcepto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@
             this.txtconcepto.Location = new System.Drawing.Point(31, 119);
             this.txtconcepto.MaxLength = 50;
             this.txtconcepto.Name = "txtconcepto";
-            this.txtconcepto.Size = new System.Drawing.Size(452, 26);
+            this.txtconcepto.Size = new System.Drawing.Size(832, 26);
             this.txtconcepto.TabIndex = 15;
             // 
             // label2
@@ -133,50 +134,72 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(611, 219);
             this.dataGridView1.TabIndex = 28;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnnuevo
             // 
+            this.btnnuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnnuevo.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnnuevo.Image")));
+            this.btnnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnnuevo.Location = new System.Drawing.Point(735, 399);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(128, 36);
             this.btnnuevo.TabIndex = 33;
-            this.btnnuevo.Text = "NUEVO";
+            this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
             // 
             // btnactualizar
             // 
+            this.btnactualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnactualizar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnactualizar.Image")));
+            this.btnactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnactualizar.Location = new System.Drawing.Point(601, 399);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Size = new System.Drawing.Size(128, 36);
             this.btnactualizar.TabIndex = 32;
-            this.btnactualizar.Text = "ACTUALIZAR";
+            this.btnactualizar.Text = "Actualizar";
             this.btnactualizar.UseVisualStyleBackColor = true;
             // 
             // btneditar
             // 
+            this.btneditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneditar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditar.Image = ((System.Drawing.Image)(resources.GetObject("btneditar.Image")));
+            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneditar.Location = new System.Drawing.Point(467, 399);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(128, 36);
             this.btneditar.TabIndex = 31;
-            this.btneditar.Text = "EDITAR";
+            this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btneliminar
             // 
+            this.btneliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btneliminar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Image = ((System.Drawing.Image)(resources.GetObject("btneliminar.Image")));
+            this.btneliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.Location = new System.Drawing.Point(333, 399);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(128, 36);
             this.btneliminar.TabIndex = 30;
-            this.btneliminar.Text = "ELIMINAR";
+            this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
             // 
             // btnguardar
             // 
+            this.btnguardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnguardar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar.Image")));
+            this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnguardar.Location = new System.Drawing.Point(199, 399);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(128, 36);
             this.btnguardar.TabIndex = 29;
-            this.btnguardar.Text = "GUARDAR";
+            this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 

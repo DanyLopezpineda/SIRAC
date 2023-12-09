@@ -46,5 +46,20 @@ namespace SIRAC.Fuentes
             DBSIRAC.Close();
             return DS.Tables["Tabla"];
         }
+
+        //------------------------VISTA PARA OBTENER LOS DATOS DE LOS CONCEPTOS DE PAGOS DE LA TABLA DE CATALOGOS------------------------//
+
+        public DataTable GetConceptos_Pagos()
+        {
+            DBSIRAC.Open();
+            SqlCommand CMD;
+            CMD = new SqlCommand("SELECT * FROM Vw_Concept_Pagos", DBSIRAC);
+            SqlDataAdapter DA;
+            DA = new SqlDataAdapter(CMD);
+            DataSet DS = new DataSet();
+            DA.Fill(DS, "Tabla");
+            DBSIRAC.Close();
+            return DS.Tables["Tabla"];
+        }
     }
 }
