@@ -34,5 +34,25 @@ namespace SIRAC.Fuentes
             cbox.DisplayMember = "TipoTitulacion";
             cbox.DataSource = dt;
         }
+
+        public void ListPrivilegios(ComboBox cbox)
+        {
+            DBSIRAC.Open();
+            SqlCommand CMD;
+            CMD = new SqlCommand("Select * from TblCatPrivilegio WHERE Vigencia = 1", DBSIRAC);
+            SqlDataAdapter da;
+            da = new SqlDataAdapter(CMD);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DBSIRAC.Close();
+
+            DataRow Fila = dt.NewRow();
+            Fila["Privilegio"] = " --- SELECCIONE ---";
+            dt.Rows.InsertAt(Fila, 0);
+
+            cbox.ValueMember = "IdPrivilegio";
+            cbox.DisplayMember = "Privilegio";
+            cbox.DataSource = dt;
+        }
     }
 }

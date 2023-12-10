@@ -59,6 +59,7 @@ namespace SIRAC.Registros_Academicos.Catalogos
                     txtmontop.Text = "";
                     txtmontos.Text = "";
                     txtconcepto.Focus();
+                    BQBOTONES();
                 }
                 else
                 {
@@ -92,6 +93,7 @@ namespace SIRAC.Registros_Academicos.Catalogos
                 txtconcepto.Enabled = true;
                 txtmontop.Enabled = true;
                 txtmontos.Enabled = true;
+                txtconcepto.Focus();
             }
         }
 
@@ -116,6 +118,83 @@ namespace SIRAC.Registros_Academicos.Catalogos
             btneditar.Enabled = false;
             btneliminar.Enabled = false;
             btnguardar.Enabled = false;
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            string Codigo = txtcodigo.Text;
+            int Accion = 1;
+            string Deshabilitar = "exec USP_UPDATE_CATLOG_CPAGOS '" + txtconcepto.Text + "'," + txtmontop.Text + "," + txtmontos.Text + "," + Accion + ", '" + txtcodigo.Text + "'";
+            if (Codigo == "")
+            {
+                MessageBox.Show("No se encuentra el registro", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var res = MessageBox.Show("¿Esta seguro que desea eliminar el registro?", "QUESTION", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                if (res == DialogResult.Yes)
+                {
+                    if (i.INSERT(Deshabilitar))
+                    {
+                        MessageBox.Show("REGISTRO DESHABILITADO CORRECTAMENTE", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dataGridView1.DataSource = cn.GetConceptos_Pagos();
+                        txtcodigo.Text = "";
+                        txtconcepto.Text = "";
+                        txtmontop.Text = "";
+                        txtmontos.Text = "";
+                        txtconcepto.Focus();
+                        BQBOTONES();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else if (res == DialogResult.No)
+                {
+
+                }
+            }
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = cn.GetConceptos_Pagos();
+            txtcodigo.Text = "";
+            txtconcepto.Text = "";
+            txtmontop.Text = "";
+            txtmontos.Text = "";
+            txtconcepto.Focus();
+            BQBOTONES();
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            string Codigo = txtcodigo.Text;
+            int Accion = 2;
+            string Actualizar = "exec USP_UPDATE_CATLOG_CPAGOS '" + txtconcepto.Text + "'," + txtmontop.Text + "," + txtmontos.Text + "," + Accion + ", '" + txtcodigo.Text + "'";
+            if(Codigo == "")
+            {
+                MessageBox.Show("No se encuentra el registro", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if(i.INSERT(Actualizar))
+                {
+                    MessageBox.Show("REGISTRO ACTUALIZADO CORRECTAMENTE", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = cn.GetConceptos_Pagos();
+                    txtcodigo.Text = "";
+                    txtconcepto.Text = "";
+                    txtmontop.Text = "";
+                    txtmontos.Text = "";
+                    txtconcepto.Focus();
+                    BQBOTONES();
+                }
+                else
+                {
+                    MessageBox.Show("Error", "NOTIFICACION", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                } 
+            }
         }
     }
 }

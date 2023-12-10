@@ -49,6 +49,12 @@
     <Compile Include="Fuentes\Datos.cs" />
     <Compile Include="Fuentes\Insercion.cs" />
     <Compile Include="Fuentes\Listados.cs" />
+    <Compile Include="PanelControl\Usuarios\NUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelControl\Usuarios\NUser.Designer.cs">
+      <DependentUpon>NUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registros_Academicos\Catalogos\CatalogosCarreras.cs">
@@ -75,6 +81,9 @@
     <Compile Include="Registros_Academicos\Catalogos\CatalogosMaestros.Designer.cs">
       <DependentUpon>CatalogosMaestros.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PanelControl\Usuarios\NUser.resx">
+      <DependentUpon>NUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -111,6 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\iconos\icon-guardar.png" />
+    <Content Include="img\iconos\icons-edit.png" />
+    <Content Include="img\iconos\icons-eliminar.png" />
+    <Content Include="img\iconos\icons-guardar.png" />
+    <Content Include="img\iconos\icons-new.png" />
+    <Content Include="img\iconos\icons-update.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
